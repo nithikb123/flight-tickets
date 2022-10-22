@@ -1,6 +1,22 @@
 <html>
     <head>
+      <title>booking</title>
+      <link href="./css/main.css" type="text/css" rel="stylesheet"/>
+      <!-- <style type="text/css">
+        label{
+          font-weight: bold;
+          color: red;
+        }
+        .tab1 {
+          border: 1px solid green;
+        }
+        .tab2{
+          border: 1px solid blue;
+        }
+      </style> -->
+    </head>
         <body>
+          <div class="parent"><p>hello hiii welcome</p></div>
             <h1 style="color:red"> Book your tickets!!</h1>
             <a href="index.html"><i>Back to home page</i></a>
             <table>
@@ -35,7 +51,115 @@
                     <td><a href="booknow.html"> book now</a></td>
                   </tr>
               </table>
-        </body>
+              <form action="print.html" method="post">
+              <table class="tab1" cellspacing="6" cellpadding="2">
+                <tr>
+                  <td class="tab2"><label for="title">Title</label> </td>
+                  <td><select> id="title" name="title" multiple> 
+                    <option value="1"> Mr.</option>
+                    <option value="2" >Mrs.</option>
+                    <option value="3"> Ms.></option>
+                  </select>
+                </td>
+                </tr>
+              <tr>
+             <td> <label for="FirstName"></label>First Name:</td>
+             <td> <input type="text" id="FirstName"  placeholder="Your first name"></td>
+             </tr>
+             <tr>
+             <td> <label for="LastName"></label>Last Name: </td>
+             <td><input type="text" id="LastName" placeholder="Your last name"></td>
+            </tr>
+            <tr>
+            <td> <label for="Address"></label>Address: </td>
+            <td><textarea id="Address" placeholder="address" rows="6" cols="20" ></textarea> </td>
+            </tr>
+            <tr>
+              <td><label for="city">City</label> </td>
+              <td><select> id="city" name="city" multiple> 
+                <option value="1"> ernakulam.</option>
+                <option value="2" >alapuzha</option>
+                <option value="3"> thrissur</option>
+              </select>
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="dob"></label>DOB:   
+              </td>
+              <td>
+                <input type="date" id="dob" placeholder="your date of birth">
+              </td>
+            </tr>
+            <td>
+              <label for="gender"></label>Gender:   
+            </td>
+            <td>
+          <input type="radio" id " id="male" name="gender" value="1"/> male
+          <input type="radio" id " id="female" name="gender" value="2"/> female
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="photo"></label>
+          </td>
+          <td>
+            <input type="file" id="photofile" accept="image/*,*.pdf"/>
+          </td>
 
-    </head>
+        </tr>
+        <td>
+          <label for="contact"></label>Can we contact? 
+        </td>
+        <td>
+      <input type="radio" id="yes" name="option" value="1"/> yes
+      <input type="radio" id="no" name="option" value="1"/> No
+      </td>
+      <tr>
+        <td>
+          <label for="communication preference"></label>communication preference:
+        </td>
+        <td>
+          <input type="checkbox" id="checkbox"  value="1"> Email
+          <input type="checkbox" id="checkbox"  value="2"> SMS
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" id="checkbox"/> I agree to the  <a href="terms.html">terms and condition</a>of the website
+        </td>
+        
+      </tr>
+          <tr>
+            <td>
+              <input type="submit" onclick="javascript:saveData();" id="submit" />
+            </td>
+            <td>
+              <input type="reset" id="reset" name="reset" value="reset"/>
+            </td>
+          </tr>
+
+              </tr>
+            </table>
+          </form>
+          <script>
+            function saveData()
+            {
+              var FirstName=document.getElementById('FirstName').value;
+              var LastName=document.getElementById('LastName').value;
+              var Address=document.getElementById('Address').value;
+
+              localStorage.setItem('FirstName',FirstName);
+              localStorage.setItem('LastName',LastName);
+              localStorage.setItem('Address',Address);
+          
+            }
+          </script>
+          <video width="320" height="240" controls autoplay muted>
+            <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+        </body>
 </html>

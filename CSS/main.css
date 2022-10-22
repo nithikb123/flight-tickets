@@ -1,0 +1,23 @@
+body{
+    padding:0px;
+    margin:0px;
+}
+label{
+    font-weight: bold;
+    color: red;
+  }
+  .tab1 {
+    border: 1px solid green;
+  }
+  .tab2{
+    border: 1px solid blue;
+  }
+  .parent{
+    border:2px dashed rgb(109, 10, 208);
+    padding: 10px;
+    margin: 5px;
+    margin-bottom: 50px;
+    /* margin-left: 2px; */
+    /* color:aqua;
+    font-weight: 100; */
+  }
